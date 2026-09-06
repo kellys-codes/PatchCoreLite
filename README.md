@@ -1,14 +1,12 @@
-# PatchCore Lite — Transistor Defect Inspector
+# ⚡️ PatchCore Lite (Transistor Defect Inspector)
 
-PatchCore Lite is a lightweight and energy-efficient anomaly detection pipeline for detecting defects on transistor images using **feature memory + nearest-neighbor matching**.
+Lightweight and energy-efficient anomaly detection pipeline for detecting defects on transistor images using **feature memory + nearest-neighbor matching**.
 
 It includes:
 - **Training** to build a patch feature memory bank from *normal* (“good”) samples
 - **Automatic thresholding** using training score statistics
 - **CLI evaluation** to compute detection accuracy on a labeled test set
 - **Streamlit app** to inspect images and visualize **patch-level anomaly heatmaps**
-
----
 
 ## What this project does (high level)
 1. Load **ResNet-18** pretrained on ImageNet.
@@ -19,8 +17,6 @@ It includes:
 6. Decide **NORMAL vs ANOMALY** using an auto-computed threshold:
 
 > **threshold = mean(train_scores) + 3 × std(train_scores)**
-
----
 
 ## Repository structure
 - `preprocessing.py`
@@ -43,8 +39,6 @@ It includes:
   - Streamlit UI for uploading images / capturing a photo
   - Loads `transistor_lite_model.pt`
   - Produces anomaly score + overlay heatmap
-
----
 
 ## Data format
 The code expects this folder layout:
@@ -76,8 +70,6 @@ Notes:
 - `good/` is used as the **normal** reference during evaluation.
 - The evaluation script labels `cat != "good"` as **defect**.
 
----
-
 ## Setup
 
 First, clone the repository and navigate to the root directory:
@@ -98,8 +90,6 @@ See `requirements.txt`:
 ```bash
 pip install -r requirements.txt
 ```
-
----
 
 ## Training
 Build the memory bank and auto-threshold, then save the model checkpoint.
