@@ -1,6 +1,9 @@
 # ⚡️ PatchCore Lite (Transistor Defect Inspector)
 
-Lightweight and energy-efficient anomaly detection pipeline for detecting defects on transistor images using **feature memory + nearest-neighbor matching**.
+Lightweight and energy-efficient anomaly detection pipeline for detecting defects on transistor images using feature memory + nearest-neighbor matching.
+
+## 📚 Tech stack
+- Backend: Python
 
 It includes:
 - **Training** to build a patch feature memory bank from *normal* (“good”) samples
