@@ -60,3 +60,7 @@ A couple of constants worth knowing about (set at the top of `train.py` / `app.p
 docker build -t patchcore-lite .
 docker run -p 7860:7860 patchcore-lite
 ```
+
+## 🔗 Links to Demo
+- Video: https://drive.google.com/file/d/1nMGnkIKF9_AHRZ_Ykq0Xy9rFuhpk8bNX/view?usp=sharing
+- Live app: https://kell08-transistor-inspector.hf.space (may take a minute to load)
